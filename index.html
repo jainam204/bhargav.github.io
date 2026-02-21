@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tejas Patel — Mechanical Engineer</title>
+    <meta name="description"
+        content="Mechanical Engineer skilled in SolidWorks, PV Elite, NozzlePRO, and CAD design. Specializing in equipment modeling and pressure vessel design.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scroll-progress"></div>
+    </div>
+
+    <!-- Particle Network Canvas -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Ambient Glow Blobs -->
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-blob blob-1"></div>
+        <div class="ambient-blob blob-2"></div>
+        <div class="ambient-blob blob-3"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- ═══════════ HEADER ═══════════ -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-text">TP</span><span class="dot">.</span>
+            </a>
+
+            <nav class="nav-desktop" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                    <!-- Sun icon -->
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <!-- Moon icon -->
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+                <button id="menu-toggle" class="menu-btn" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+        <nav>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#skills" class="mobile-link">Skills</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </nav>
+    </div>
+
+    <main>
+
+        <!-- ═══════════ HERO ═══════════ -->
+        <section id="hero" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+
+                    <div class="badge-pill fade-in">
+                        <span class="status-dot"></span>
+                        Available for work
+                    </div>
+
+                    <h1 class="hero-title fade-in-up">
+                        Engineering precise<br>
+                        <span class="gradient-text hacker-text" data-value="solutions.">solutions.</span>
+                    </h1>
+
+                    <p class="hero-subtitle fade-in-up delay-1">
+                        Hi, I'm <strong>Tejas Patel</strong> — a Mechanical Engineer
+                        specializing in Equipment Design, Pressure Vessels, and
+                        Industrial Automation based in Ahmedabad, India.
+                    </p>
+
+                    <div class="hero-btns fade-in-up delay-2">
+                        <a href="#projects" class="btn btn-primary">
+                            View Work
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"
+                                viewBox="0 0 24 24">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+
+                </div>
+
+                <!-- Hero Visual — right side -->
+                <div class="hero-visual fade-in delay-3">
+                    <div class="orb orb-1"></div>
+                    <div class="orb orb-2"></div>
+                    <div class="orb orb-3"></div>
+                    <div class="code-block">
+                        <pre><code><span class="comment">// Tejas Patel — Mechanical Engineer</span>
+<span class="keyword">const</span> <span class="variable">engineer</span> = {
+  <span class="property">name</span>:      <span class="string">"Tejas Patel"</span>,
+  <span class="property">location</span>:  <span class="string">"Ahmedabad, IN"</span>,
+  <span class="property">skills</span>:    [<span class="string">"SolidWorks"</span>, <span class="string">"PV Elite"</span>, <span class="string">"NozzlePRO"</span>],
+  <span class="property">available</span>: <span class="boolean">true</span>,
+  <span class="property">projects</span>:  <span class="number">10</span><span class="string">+</span>,
+};
+
+<span class="keyword">export default</span> <span class="variable">engineer</span>;</code></pre>
+                    </div>
+                    <div class="tech-orbit">
+                        <div class="orbit-pill"><span class="pill-dot"></span>SolidWorks</div>
+                        <div class="orbit-pill"><span class="pill-dot"></span>PV Elite</div>
+                        <div class="orbit-pill"><span class="pill-dot"></span>Design</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator fade-in delay-3">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ ABOUT ═══════════ -->
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">Designing robust systems,<br><span class="gradient-text">from concept to
+                            reality.</span></h2>
+                    <p class="section-desc">Who I am and what I love designing.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-content reveal">
+                        <p>I'm a detail-oriented <strong>Mechanical Engineer</strong> with deep expertise in
+                            SolidWorks, PV Elite, NozzlePRO, AutoCAD, and Ansys.</p>
+                        <p>With experience in equipment design, pressure vessels, heat exchangers, and
+                            industrial layouts, I deliver engineering solutions that are mechanically sound and
+                            practical to manufacture. I bring a strong analytical background to everything I design.</p>
+                        <p>I believe the best engineering lives at the intersection of structural integrity and
+                            manufacturing efficiency — and that's exactly the space I operate in.</p>
+
+                        <div class="stats-grid">
+                            <div class="stat-item reveal reveal-delay-1">
+                                <span class="stat-number">20+</span>
+                                <span class="stat-label">Equipments Designed</span>
+                            </div>
+                            <div class="stat-item reveal reveal-delay-2">
+                                <span class="stat-number">4+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            <div class="stat-item reveal reveal-delay-3">
+                                <span class="stat-number">3+</span>
+                                <span class="stat-label">Core Softwares</span>
+                            </div>
+                            <div class="stat-item reveal reveal-delay-4">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Precision</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-cards">
+                        <div class="feature-card reveal reveal-delay-1">
+                            <div class="icon-box">⚙️</div>
+                            <h3>Equipment Design</h3>
+                            <p>Pressure Vessels, Heat Exchangers</p>
+                        </div>
+                        <div class="feature-card reveal reveal-delay-2">
+                            <div class="icon-box">📐</div>
+                            <h3>3D Modeling</h3>
+                            <p>SolidWorks, AutoCAD</p>
+                        </div>
+                        <div class="feature-card reveal reveal-delay-3">
+                            <div class="icon-box">🔍</div>
+                            <h3>Analysis</h3>
+                            <p>PV Elite, NozzlePRO, Ansys</p>
+                        </div>
+                        <div class="feature-card reveal reveal-delay-4">
+                            <div class="icon-box">🏭</div>
+                            <h3>Industrial Layouts</h3>
+                            <p>Piping & Manufacturing Workflows</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ EXPERIENCE / JOURNEY ═══════════ -->
+        <section id="experience" class="section experience">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Experience</span>
+                    <h2 class="section-title">My Journey.</h2>
+                    <p class="section-desc">A timeline of my professional experience and projects.</p>
+                </div>
+
+                <div class="timeline">
+                    <!-- Timeline Item -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2021 - Present</span>
+                            <h3>Mechanical Design Engineer</h3>
+                            <span class="timeline-company">Industrial Equipment Co.</span>
+                            <p>Designing and analyzing pressure vessels and heat exchangers. Preparing detailed
+                                engineering drawings, performing calculations using PV Elite and NozzlePRO, and ensuring
+                                compliance with ASME standards.</p>
+                            <div class="timeline-tags">
+                                <span>SolidWorks</span>
+                                <span>PV Elite</span>
+                                <span>ASME Sec VIII</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item -->
+                    <div class="timeline-item reveal reveal-delay-1">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2019 - 2021</span>
+                            <h3>CAD / Design Engineer</h3>
+                            <span class="timeline-company">Engineering Solutions Pvt Ltd.</span>
+                            <p>Created 3D models and 2D fabrication drawings for structural and piping projects.
+                                Collaborated with manufacturing teams to optimize designs for cost and
+                                manufacturability.</p>
+                            <div class="timeline-tags">
+                                <span>AutoCAD</span>
+                                <span>SolidWorks</span>
+                                <span>Drafting</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item -->
+                    <div class="timeline-item reveal reveal-delay-2">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2018 - 2019</span>
+                            <h3>Graduate Engineer Trainee</h3>
+                            <span class="timeline-company">Manufacturing Plant</span>
+                            <p>Assisted in the maintenance and optimization of shop-floor machinery. Gained hands-on
+                                experience with quality control processes, GD&T, and industrial safety norms.</p>
+                            <div class="timeline-tags">
+                                <span>Machining</span>
+                                <span>GD&T</span>
+                                <span>QC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ SKILLS ═══════════ -->
+        <section id="skills" class="section skills">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Tech Stack</span>
+                    <h2 class="section-title">The tools I build with.</h2>
+                    <p class="section-desc">A curated set of technologies I use to craft great products.</p>
+                </div>
+
+                <div class="bento-grid">
+                    <div class="bento-item large reveal">
+                        <h3>Core Engineering Design</h3>
+                        <div class="tag-cloud">
+                            <span>SolidWorks</span>
+                            <span>AutoCAD 2D/3D</span>
+                            <span>Autodesk Inventor</span>
+                            <span>CATIA</span>
+                            <span>Equipment Modeling</span>
+                            <span>Piping Layouts</span>
+                            <span>Sheet Metal Design</span>
+                            <span>GD&T</span>
+                        </div>
+                    </div>
+                    <div class="bento-item medium reveal reveal-delay-1">
+                        <h3>Analysis & Simulation</h3>
+                        <div class="tag-cloud">
+                            <span>PV Elite</span>
+                            <span>NozzlePRO</span>
+                            <span>Ansys</span>
+                            <span>FEA</span>
+                            <span>Stress Analysis</span>
+                            <span>Thermal Analysis</span>
+                            <span>ASME Sec VIII Div 1/2</span>
+                        </div>
+                    </div>
+                    <div class="bento-item medium reveal reveal-delay-2">
+                        <h3>Manufacturing Knowledge</h3>
+                        <div class="tag-cloud">
+                            <span>Welding Processes</span>
+                            <span>Material Selection</span>
+                            <span>Machining Ops</span>
+                            <span>Nondestructive Testing</span>
+                            <span>Fabrication Sequences</span>
+                        </div>
+                    </div>
+                    <div class="bento-item small reveal reveal-delay-1">
+                        <h3>Industry Docs</h3>
+                        <div class="tag-cloud">
+                            <span>Bill of Materials (BOM)</span>
+                            <span>P&ID</span>
+                            <span>General Arrangement (GA)</span>
+                            <span>MTCs</span>
+                            <span>Inspection Reports</span>
+                        </div>
+                    </div>
+                    <div class="bento-item small reveal reveal-delay-2">
+                        <h3>Soft Skills</h3>
+                        <div class="tag-cloud">
+                            <span>Project Management</span>
+                            <span>Vendor Coordination</span>
+                            <span>Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ PROJECTS ═══════════ -->
+        <section id="projects" class="section projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Selected Works</span>
+                    <h2 class="section-title">Things I've built.</h2>
+                    <p class="section-desc">A selection of projects across web, mobile, and AI.</p>
+                </div>
+
+                <div class="projects-grid" id="projects-container">
+                    <!-- Cards loaded dynamically via script.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ CONTACT ═══════════ -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <div class="contact-wrapper reveal">
+                    <div class="contact-info">
+                        <h2>Let's <span class="gradient-text">work together</span></h2>
+                        <p>Have a project in mind? I'd love to hear about it. Let's build something great.</p>
+
+                        <div class="contact-links">
+                            <a href="mailto:tejaspatel3134.tp@gmail.com" class="contact-link">
+                                <span class="icon">✉️</span> tejaspatel3134.tp@gmail.com
+                            </a>
+                            <a href="tel:+919662143139" class="contact-link">
+                                <span class="icon">📞</span> +91 96621 43139
+                            </a>
+                            <div class="contact-link">
+                                <span class="icon">📍</span> Ahmedabad, Gujarat, India
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                GitHub ↗
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                LinkedIn ↗
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">TP<span class="dot">.</span></div>
+                <div class="footer-divider"></div>
+                <p>&copy; 2025 Tejas Patel. All rights reserved.</p>
+                <p class="footer-tagline">Designed &amp; Built with ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
