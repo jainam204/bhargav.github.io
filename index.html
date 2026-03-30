@@ -5,258 +5,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhargav Rawat | Mechanical Engineer</title>
-    <link rel="stylesheet" href="style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;500;600;700&display=swap"
+    <meta name="description"
+        content="Mechanical engineering portfolio of Bhargav Rawat focused on design, simulation, pressure systems, and manufacturing optimization.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Teko:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Jarvis Boot Sequence Overlay -->
-    <div id="boot-screen" class="boot-screen">
-        <div class="boot-content">
-            <div class="boot-logo">J.A.R.V.I.S.</div>
-            <div class="boot-text" id="boot-text"></div>
-            <div class="boot-progress-bar">
-                <div class="boot-progress"></div>
-            </div>
-            <div class="boot-status">SYSTEM ONLINE</div>
-        </div>
-    </div>
+    <div class="bg-shape bg-shape-left" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape-right" aria-hidden="true"></div>
+    <div class="noise-layer" aria-hidden="true"></div>
 
-    <!-- HUD Overlay Scanning Lines -->
-    <div class="hud-scanlines"></div>
-
-    <!-- Background elements -->
-    <div class="blueprint-bg"></div>
-    <div class="gear gear-1"><i class="fas fa-cog"></i></div>
-    <div class="gear gear-2"><i class="fas fa-cog"></i></div>
-
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
-    <nav>
-        <div class="logo">BR<span>.MECH</span></div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <header class="site-header">
+        <nav class="navbar container">
+            <a href="#home" class="brand">BHARGAV<span> RAWAT</span></a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <p class="greeting">HELLO, I AM</p>
-                <h1 class="glitch" data-text="BHARGAV RAWAT">BHARGAV RAWAT</h1>
-                <h2 class="subtitle">MECHANICAL ENGINEER</h2>
-                <p class="description">
-                    Passionate about mechanical design and engineering, creating robust solutions
-                    with precision and innovation. Providing comprehensive engineering services since 2019.
+        <section id="home" class="hero container">
+            <div class="hero-copy reveal">
+                <p class="eyebrow">Mechanical Engineering Portfolio</p>
+                <h1>Designing reliable systems for real-world operations.</h1>
+                <p class="hero-text">
+                    I help teams turn complex engineering ideas into manufacturable, code-compliant, and high-performance
+                    solutions across CAD design, simulation, and pressure equipment.
                 </p>
-                <div class="hero-btns">
-                    <a href="#contact" class="btn primary-btn">
-                        <span class="btn-text">GET IN TOUCH</span>
-                        <div class="btn-overlay"></div>
-                    </a>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Book a Discussion</a>
+                    <a href="#expertise" class="btn btn-ghost">View Expertise</a>
                 </div>
             </div>
-            <div class="hero-visual">
-                <!-- Arc Reactor -->
-                <div class="arc-reactor">
-                    <div class="reactor-ring outer-ring"></div>
-                    <div class="reactor-ring middle-ring"></div>
-                    <div class="reactor-ring inner-ring">
-                        <div class="coil-container">
-                            <div class="coil"></div>
-                            <div class="coil"></div>
-                            <div class="coil"></div>
-                            <div class="coil"></div>
-                            <div class="coil"></div>
-                            <div class="coil"></div>
-                            <div class="coil"></div>
-                            <div class="coil"></div>
-                        </div>
-                    </div>
-                    <div class="reactor-core">
-                        <div class="core-glow"></div>
-                        <div class="core-center"></div>
-                    </div>
 
-                    <!-- Floating Data Points -->
-                    <div class="hud-data-point dp-1"><span class="data-label">SYS_PR:</span> 100%</div>
-                    <div class="hud-data-point dp-2"><span class="data-label">CORE_TEMP:</span> OPTIMAL</div>
-                    <div class="hud-data-point dp-3"><span class="data-label">TARGET:</span> LOCKED</div>
+            <aside class="hero-card reveal" aria-label="Profile summary">
+                <div class="card-top">
+                    <p>Lead Profile</p>
+                    <span>Since 2019</span>
                 </div>
+                <h2>Bhargav Rawat</h2>
+                <p>Mechanical Engineer specialized in design systems, FEA-backed validation, and production-ready deliverables.</p>
+                <div class="card-tags">
+                    <span>SolidWorks</span>
+                    <span>AutoCAD</span>
+                    <span>ANSYS</span>
+                    <span>PV Elite</span>
+                </div>
+            </aside>
+        </section>
+
+        <section id="about" class="impact-section container reveal">
+            <div class="section-heading">
+                <p class="eyebrow">Operational Impact</p>
+                <h2>Performance that can be measured</h2>
+            </div>
+            <div class="counter-grid">
+                <article class="counter-card">
+                    <p class="counter" data-target="7" data-suffix="+">0</p>
+                    <h3>Years Experience</h3>
+                </article>
+                <article class="counter-card">
+                    <p class="counter" data-target="130" data-suffix="+">0</p>
+                    <h3>Projects Delivered</h3>
+                </article>
+                <article class="counter-card">
+                    <p class="counter" data-target="98" data-suffix="%">0</p>
+                    <h3>Client Satisfaction</h3>
+                </article>
+                <article class="counter-card">
+                    <p class="counter" data-target="22" data-suffix="%">0</p>
+                    <h3>Avg. Rework Reduced</h3>
+                </article>
             </div>
         </section>
 
-        <section id="experience" class="experience-section">
-            <h2 class="section-title">PROFESSIONAL JOURNEY</h2>
-            <div class="timeline">
-                <div class="timeline-item graduation">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2019</div>
-                        <h3>Mechanical Engineering Graduate</h3>
-                        <p>Commenced professional career holding a strong foundational background in mechanical systems,
-                            thermodynamics, and fluid mechanics.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-category"><i class="fas fa-cube"></i> Design & Modeling</div>
-                        <h3>SolidWorks, Creo & AutoCAD</h3>
-                        <p>Over the years, engineered complex 3D mechanical assemblies and precise 2D drafting.
-                            Expertise in parametric modeling, sheet metal design, P&ID creation, and producing detailed
-                            manufacturing drawings that ensure seamless fabrication processes.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-category"><i class="fas fa-network-wired"></i> Analysis & Simulation</div>
-                        <h3>Ansys & FEA-Nozzle PRO</h3>
-                        <p>Conducted rigorous Finite Element Analysis (FEA) to determine structural integrity under
-                            thermal and dynamic stress. Specialized in nozzle-to-shell junction analysis to guarantee
-                            compliance with rigorous industrial safety standards.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-category"><i class="fas fa-database"></i> Pressure Vessels & Piping</div>
-                        <h3>PV Elite & MEP Piping</h3>
-                        <p>Designed and verified pressure vessels and heat exchangers using PV Elite in accordance with
-                            ASME codes. Executed comprehensive MEP piping solutions including isometric routing, clash
-                            detection, and layout optimization for process plants.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-category"><i class="fas fa-tools"></i> Machining & Manufacturing</div>
-                        <h3>MasterCam</h3>
-                        <p>Bridged the gap between design and manufacturing by generating highly optimized CNC
-                            programming and toolpaths. Conducted machining simulations to eliminate collisions and
-                            reduce cycle times for precision-machined parts.</p>
-                    </div>
-                </div>
+        <section id="expertise" class="expertise-section container">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Core Expertise</p>
+                <h2>End-to-end engineering capability</h2>
+            </div>
+            <div class="expertise-grid">
+                <article class="expertise-card reveal">
+                    <i class="fas fa-drafting-compass"></i>
+                    <h3>CAD Design</h3>
+                    <p>High-precision 2D and 3D modeling for equipment, assemblies, sheet metal, and detailed fabrication drawings.</p>
+                </article>
+                <article class="expertise-card reveal">
+                    <i class="fas fa-wave-square"></i>
+                    <h3>Simulation & FEA</h3>
+                    <p>Structural and thermal analysis using Ansys and FEA-Nozzle PRO to validate durability before manufacturing.</p>
+                </article>
+                <article class="expertise-card reveal">
+                    <i class="fas fa-industry"></i>
+                    <h3>Pressure Systems</h3>
+                    <p>Pressure vessel and piping engineering with ASME-compliant checks through PV Elite and process layout planning.</p>
+                </article>
+                <article class="expertise-card reveal">
+                    <i class="fas fa-gears"></i>
+                    <h3>Manufacturing Support</h3>
+                    <p>CNC toolpath strategy and production support in MasterCam to improve machining reliability and cycle efficiency.</p>
+                </article>
             </div>
         </section>
 
-        <section id="skills" class="skills-section">
-            <h2 class="section-title">TECHNICAL ARMORY</h2>
-            <div class="skills-grid">
-                <!-- Skill Cards -->
-                <div class="skill-card" style="--delay: 0.1s">
-                    <div class="skill-icon"><i class="fas fa-drafting-compass"></i></div>
-                    <h3>AutoCAD 2D/3D</h3>
-                    <div class="skill-meter">
-                        <div class="meter-fill" style="width: 95%"></div>
-                    </div>
+        <section id="contact" class="contact-section container reveal">
+            <div class="contact-panel">
+                <div>
+                    <p class="eyebrow">Let us connect</p>
+                    <h2>Ready to engineer your next project?</h2>
+                    <p>Share your requirements and I will help you move from concept to production with speed and clarity.</p>
                 </div>
-                <div class="skill-card" style="--delay: 0.2s">
-                    <div class="skill-icon"><i class="fas fa-cube"></i></div>
-                    <h3>SolidWorks</h3>
-                    <div class="skill-meter">
-                        <div class="meter-fill" style="width: 90%"></div>
-                    </div>
-                </div>
-                <div class="skill-card" style="--delay: 0.3s">
-                    <div class="skill-icon"><i class="fas fa-cogs"></i></div>
-                    <h3>Creo</h3>
-                    <div class="skill-meter">
-                        <div class="meter-fill" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="skill-card" style="--delay: 0.4s">
-                    <div class="skill-icon"><i class="fas fa-water"></i></div>
-                    <h3>MEP Piping</h3>
-                    <div class="skill-meter">
-                        <div class="meter-fill" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="skill-card" style="--delay: 0.5s">
-                    <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
-                    <h3>Ansys</h3>
-                    <div class="skill-meter">
-                        <div class="meter-fill" style="width: 75%"></div>
-                    </div>
-                </div>
-                <div class="skill-card" style="--delay: 0.6s">
-                    <div class="skill-icon"><i class="fas fa-tools"></i></div>
-                    <h3>MasterCam</h3>
-                    <div class="skill-meter">
-                        <div class="meter-fill" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="skill-card" style="--delay: 0.7s">
-                    <div class="skill-icon"><i class="fas fa-database"></i></div>
-                    <h3>PV Elite</h3>
-                    <div class="skill-meter">
-                        <div class="meter-fill" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="skill-card" style="--delay: 0.8s">
-                    <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>FEA-Nozzle PRO</h3>
-                    <div class="skill-meter">
-                        <div class="meter-fill" style="width: 90%"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact-section">
-            <h2 class="section-title">COMMUNICATION LINK</h2>
-            <div class="contact-container">
-                <div class="contact-card">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="icon-wrapper">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h3>Email</h3>
-                                <p><a href="mailto:rbhargav743@gmail.com">rbhargav743@gmail.com</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="icon-wrapper">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h3>Mobile</h3>
-                                <p><a href="tel:+918200204961">+91 8200204961</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="icon-wrapper">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h3>Location</h3>
-                                <p>India</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="contact-list">
+                    <a href="mailto:rbhargav743@gmail.com"><i class="fas fa-envelope"></i> rbhargav743@gmail.com</a>
+                    <a href="tel:+918200204961"><i class="fas fa-phone"></i> +91 8200204961</a>
+                    <p><i class="fas fa-location-dot"></i> India</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Bhargav Rawat. Engineered with Precision.</p>
+    <footer class="footer">
+        <p>&copy; <span id="current-year"></span> Bhargav Rawat. Built for precision engineering.</p>
     </footer>
 
     <script src="script.js"></script>
