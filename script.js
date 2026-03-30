@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js-enabled');
+
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('nav-links');
